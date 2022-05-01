@@ -1,0 +1,27 @@
+
+<section class="container py-4">
+  <h1>Interest Simulator</h1>
+  <form action="/" method="post">
+    <div class="mb-3">
+      <label for="capital" class="form-label">Enter Capital</label>
+      <br>
+    <input type="number" class="form-control" name="capital" value="{{capital}}" size="9">
+    <br>
+    </div>
+    <div class="mb-3">
+      <label for="interesrate" class="form-label">Enter Annual Interes Rate</label>
+      <input type="number" class="form-control" name="interesrate" value="{{interesrate}}" size="9"n>
+    </div>
+    <div class="mb-3">
+      <label for="years" class="form-label">Enter Term Years</label>
+      <input type="number" class="form-control" name="years" value="{{years}}">
+    </div>
+    <button type="submit" class="btn btn-primary">Simulate Interest</button>
+  </form>
+  
+  {{#if interes}}
+  <div class="mt-3 fs-4">
+    <p><span class="fw-bold">Result:</span> {{interes}}</p>
+  </div>
+  {{/if}}
+</section>
